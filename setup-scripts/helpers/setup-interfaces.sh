@@ -56,7 +56,7 @@ rmmod rte_kni
 insmod $sdk/$target/kmod/rte_kni.ko "lo_mode=lo_mode_ring"
 
 name=`uname -n`
-if [ $name == "mshahbaz-poweredge-1-pve" ]; then
+if [ $name == "mshahbaz-poweredge-3-pve" ]; then
 $sdk/tools/dpdk_nic_bind.py -b igb_uio eth1 eth3 eth4 eth5 eth6 eth7
 else 
 echo "Hostname not handled"
