@@ -57,11 +57,11 @@ insmod $sdk/$target/kmod/rte_kni.ko "lo_mode=lo_mode_ring"
 
 name=`uname -n`
 if [ $name == "mshahbaz-poweredge-3-pve" ]; then
-$sdk/tools/dpdk_nic_bind.py -b igb_uio eth1 eth3 eth4 eth5 eth6 eth7
+$sdk/tools/dpdk_nic_bind.py -b igb_uio 01:00.0 01:00.1 05:00.0 05:00.1 05:00.2 05:00.3
 elif [ $name == "mshahbaz-poweredge-2-pve" ]; then
-$sdk/tools/dpdk_nic_bind.py -b igb_uio eth1 eth3 eth4 eth5 eth6 eth7
+$sdk/tools/dpdk_nic_bind.py -b igb_uio 01:00.0 01:00.1 05:00.0 05:00.1 05:00.2 05:00.3
 elif [ $name == "mshahbaz-poweredge-3-pve" ]; then
-$sdk/tools/dpdk_nic_bind.py -b igb_uio eth1 eth3 eth4 eth5 eth6 eth7
+$sdk/tools/dpdk_nic_bind.py -b igb_uio 01:00.0 01:00.1 05:00.0 05:00.1 05:00.2 05:00.3
 else 
 echo "Hostname not handled"
 exit 1
